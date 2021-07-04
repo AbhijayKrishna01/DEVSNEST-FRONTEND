@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding:0;
+    
+    
+}
+a
+{
+    color: ivory;
+    text-decoration: none;
+}
+button
+{
+    padding: 5px;
+    background-color: aqua;
+}
+p
+{
+    font-family:Courier , monospace;
+}
+body
+{
+    position:absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    
+    border: 12px solid aqua;
+    
+}
+.left_side
+{
+    padding-left: 8px;
+}
+h3
+{
+    font-family: Verdana,  Tahoma, sans-serif;
+    display:inline;
+}
+
+.para1
+{
+    font-family:Courier , monospace;
+    display:inline;
+}
+.name,.profile
+{
+    font-style:Verdana, sans-serif;
+    padding-left: 8px;
+}
