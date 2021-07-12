@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">COVID-19 CASES</h1>
+        <br><br>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Total Active Cases</th>
+                    <th>Total Deaths</th>
+                    <th>Total Recovered</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="data">
+
+                </tr>
+            </tbody>
+        </table>
+
+        
+       
+        <button  onclick="refreshData()" type="button" class="btn btn-primary btn-lg btn-block">Refresh</button>
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+
+    init()
+
+    function init() {
+        var url = "https://api.covid19api.com/summary"
+
+        $.get(url, function (data) {
+            console.log(data.Global)
+
+            data = `
+                
+                    <td>${data.Global.TotalConfirmed}</td>
+                    <td>${data.Global.TotalDeaths}</td>
+                    <td>${data.Global.TotalRecovered}</td>
+                
+                `
+            $("#data").html(data)
+        })
+    }
+
+    function clearData() {
+        $("#data").empty()
+    }
+    function refreshData() {
+        clearData()
+        init()
+    }
+
+
+</script>
+
+</html>
