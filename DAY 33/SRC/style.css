@@ -1,0 +1,19 @@
+.App 
+{
+    font-family:cursive;
+    text-align:center;
+}
+  h1
+  {
+    text-align:center
+  }
+  .form
+  {
+    /*display:flex;*/
+    width:180px;
+    margin:0 auto ;
+  }
+  input
+  {
+    height:40px
+  }
